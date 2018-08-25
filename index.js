@@ -5,6 +5,8 @@ var http = require('http');
 var url = require('url');
 var StringDecoder = require('string_decoder').StringDecoder;
 var handlers = require("./lib/handlers");
+var _data = require("./lib/data");
+
 
 
 //Create a server
