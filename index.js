@@ -6,6 +6,7 @@ var url = require('url');
 var StringDecoder = require('string_decoder').StringDecoder;
 var handlers = require("./lib/handlers");
 var _data = require("./lib/data");
+var helpers = require("./lib/helpers");
 
 
 
@@ -16,7 +17,7 @@ var server = http.createServer(function(req,res){
 	var parsedUrl = url.parse(req.url,true);
 	var path = parsedUrl.pathname;
 	var trimmedPath = path.replace(/^\/+|\/+$/g,'');
-	var queryObject = req.query;
+	var queryObject = parsedUrl.query;
 	var headers = req.headers;
 	var method = req.method;
 
@@ -35,9 +36,9 @@ var server = http.createServer(function(req,res){
 		var data = {
 			"path" : trimmedPath,
 			"query" : queryObject,
-			"payload" : buffer,
+			"payload" : helpers.parseIntoJSON(buffer),
 			"headers" : headers,
-			"method" : method
+			"method" : method.toLowerCase()
 		};
 
 		//Handle Different Requests
