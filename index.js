@@ -56,7 +56,8 @@ var server = http.createServer(function(req,res){
 //Router Object
 var router = {
 	"users" : handlers.userHandler,
-	"tokens" : handlers.tokenHandler
+	"tokens" : handlers.tokenHandler,
+	"items" : handlers.itemsHandler
 };
 
 
