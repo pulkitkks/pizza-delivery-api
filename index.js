@@ -58,7 +58,8 @@ var router = {
 	"users" : handlers.userHandler,
 	"tokens" : handlers.tokenHandler,
 	"items" : handlers.itemsHandler,
-	"cart" : handlers.cartHandler
+	"cart" : handlers.cartHandler,
+	"orders" : handlers.ordersHandler
 };
 
 
