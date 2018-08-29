@@ -22,17 +22,17 @@ Below you can find the [API Documentation](#documentation)
 Below are the routes and their description
 
 | Method | Route | Desciption | Mandatory Parameters | Optional Parameters |
-|---|---|---|
-| GET | /users | Returns the user object which is curently signed in | token_id in headers |
-| POST | /users | Creates a new user with email as key | email,password,streetAddress,name as payload data | 
-| PUT | /users | Update the currently signed in user data | token_id in headers | name,password,streetAddress
-| DELETE | /users | Deletes the currently signed in user | token_id in headers |
-| GET | /tokens | Returns the token object | token_id in headers |
-| POST | /tokens | Login as a user | email,password as payload data |
-| PUT | /tokens | Increases the expiration of token | token_id in haeders |
-| DELETE | /tokens | Delete the token data from database | token_id in headers |
-| GET | /items | Returns all of the items in the store |  |
-| GET | /cart | Returns the cart associated with user | token_id in headers |
+|---|---|---|---|---|
+| GET | /users | Returns the user object which is curently signed in | token_id in headers | |
+| POST | /users | Creates a new user with email as key | email,password,streetAddress,name as payload data | |
+| PUT | /users | Update the currently signed in user data | token_id in headers | |name,password,streetAddress
+| DELETE | /users | Deletes the currently signed in user | token_id in headers | |
+| GET | /tokens | Returns the token object | token_id in headers | |
+| POST | /tokens | Login as a user | email,password as payload data | |
+| PUT | /tokens | Increases the expiration of token | token_id in haeders | |
+| DELETE | /tokens | Delete the token data from database | token_id in headers | |
+| GET | /items | Returns all of the items in the store |  |  |
+| GET | /cart | Returns the cart associated with user | token_id in headers | |
 | POST | /cart | Adds a new item in the cart | token_id in headers,item_code,quantity,size as payload data |
 | PUT | /cart | Modify a item in the cart | token_id in headers,item_code as payload data | quantity,size as payload data |
 | DELETE | /cart | Deletes a item from cart | token_id in headers, item_code as query string |
