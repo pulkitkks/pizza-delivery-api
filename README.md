@@ -12,7 +12,7 @@ Then from your terminal run the following command
 node index.js
 ```
 
-After that you can make API request to the url [localhost:3000](localhost:3000)
+After that you can make API request to the url [localhost:3000](http://localhost:3000)
 Below you can find the [API Documentation](#documentation)
 
 
